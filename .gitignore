@@ -1,0 +1,21 @@
+*.class
+.svn/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+*.cfg
+
+# Eclipse project files
+.project
+.classpath
+.settings
+bin/
+target/
+/target/
+
+#log
+logs/
+/logs/
+springboot-tomcat/

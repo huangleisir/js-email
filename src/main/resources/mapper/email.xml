@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">  
+<mapper namespace="Email">  
+
+
+  <resultMap id="emailResultMap" type="com.jst.email.bean.Email" >
+    <id column="id" property="id" jdbcType="VARCHAR" />
+    <result column="invoice_id" property="invoiceId" jdbcType="VARCHAR" />
+    <result column="url" property="url" jdbcType="VARCHAR" />
+    <result column="status" property="status" jdbcType="VARCHAR" />
+    <result column="receive_email" property="receiveEmail" jdbcType="VARCHAR" />
+    <result column="create_time" property="createTime" jdbcType="VARCHAR" />
+    <result column="update_time" property="updateTime" jdbcType="VARCHAR" />
+  </resultMap>
+  
+   <insert id="insert" parameterType="com.jst.email.bean.Email" >
+     insert into t_email_send (id, invoice_id, url,status,receive_email,create_time)
+        values (#{id,jdbcType=VARCHAR},#{invoiceId,jdbcType=VARCHAR}, 
+     #{url,jdbcType=VARCHAR},#{status,jdbcType=VARCHAR},#{receiveEmail,jdbcType=VARCHAR},#{createTime,jdbcType=VARCHAR})
+  </insert>
+</mapper>
